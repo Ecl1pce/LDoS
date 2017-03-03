@@ -1,6 +1,7 @@
 package com.mygdx.game.sprites.tileObjects;
 
 import com.badlogic.gdx.audio.Sound;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
 import com.badlogic.gdx.math.Rectangle;
@@ -32,7 +33,7 @@ public class Coin extends InteractiveTileObject {
             if(object.getProperties().containsKey("mushroom")) {
                 screen.spawnItem(new ItemDef(new Vector2(body.getPosition().x, body.getPosition().y + 16 / LDoS.PPM),
                         Mushroom.class));
-                LDoS.manager.get("audio/sounds/powerup_spawn.wav", Sound.class).play();
+                LDoS.manager.get("audio/sounds/50_cent-in_da_club.mp3", Music.class).play();
             }
             else
                 LDoS.manager.get("audio/sounds/coin.wav", Sound.class).play();

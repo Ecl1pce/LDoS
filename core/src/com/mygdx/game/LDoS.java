@@ -48,7 +48,7 @@ public class LDoS extends Game {
 		manager.load("audio/sounds/powerdown.wav", Sound.class);
 		manager.load("audio/sounds/stomp.wav", Sound.class);
 		manager.load("audio/sounds/mariodie.wav", Sound.class);
-
+		manager.load("audio/sounds/50_cent-in_da_club.mp3", Music.class);
 		manager.finishLoading();
 
 		setScreen(new PlayScreen(this));
