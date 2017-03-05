@@ -33,7 +33,7 @@ public class Coin extends InteractiveTileObject {
             if(object.getProperties().containsKey("mushroom")) {
                 screen.spawnItem(new ItemDef(new Vector2(body.getPosition().x, body.getPosition().y + 16 / LDoS.PPM),
                         Mushroom.class));
-                LDoS.manager.get("audio/sounds/50_cent-in_da_club.mp3", Music.class).play();
+                LDoS.manager.get("audio/sounds/50_cent-in_da_club.mp3", Sound.class).play(0.2f);
             }
             else
                 LDoS.manager.get("audio/sounds/coin.wav", Sound.class).play();

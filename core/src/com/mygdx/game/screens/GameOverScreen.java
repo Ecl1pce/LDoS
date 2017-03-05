@@ -31,14 +31,14 @@ public class GameOverScreen implements Screen {
         viewport = new FitViewport(LDoS.V_WIDTH, LDoS.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, ((LDoS) game).batch);
 
-        Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(), Color.WHITE);
+        Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(), Color.GREEN);
 
         Table table = new Table();
         table.center();
         table.setFillParent(true);
 
         Label gameOverLabel = new Label("GAME OVER", font);
-        Label playAgainLabel = new Label("Fuck you, KARINA", font);
+        Label playAgainLabel = new Label("Click to try again", font);
 
         table.add(gameOverLabel).expandX();
         table.row();
