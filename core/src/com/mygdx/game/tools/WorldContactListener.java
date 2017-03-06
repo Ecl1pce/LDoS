@@ -13,9 +13,7 @@ import com.mygdx.game.sprites.Hero;
 import com.mygdx.game.sprites.other.FireBall;
 import com.mygdx.game.sprites.tileObjects.InteractiveTileObject;
 
-/**
- * Created by brentaureli on 9/4/15.
- */
+
 public class WorldContactListener implements ContactListener {
     @Override
     public void beginContact(Contact contact) {

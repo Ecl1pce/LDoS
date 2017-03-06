@@ -78,7 +78,7 @@ public class PlayScreen implements Screen{
         map = maploader.load("level1.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 1  / LDoS.PPM);
 
-        //initially set our gamcam to be centered correctly at the start of of map
+        //initially set our gamcam to be centered correctly at the start of map
         gamecam.position.set(gamePort.getWorldWidth() / 2, gamePort.getWorldHeight() / 2, 0);
 
         //create our Box2D world, setting no gravity in X, -10 gravity in Y, and allow bodies to sleep
@@ -95,8 +95,8 @@ public class PlayScreen implements Screen{
 
         music = LDoS.manager.get("audio/music/mario_music.ogg", Music.class);
         music.setLooping(true);
-        music.setVolume(0.3f);
-        //music.play();
+        music.setVolume(0.2f);
+        music.play();
 
         items = new Array<Item>();
         itemsToSpawn = new LinkedBlockingQueue<ItemDef>();

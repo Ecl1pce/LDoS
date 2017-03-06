@@ -65,8 +65,8 @@ public class FireBall extends Sprite {
         b2body.setLinearVelocity(new Vector2(fireRight ? 2 : -2, 2.5f));
     }
 
-    public void update(float dt){
-        stateTime += dt;
+    public void update(float delta){
+        stateTime += delta;
         setRegion(fireAnimation.getKeyFrame(stateTime, true));
         setPosition(b2body.getPosition().x - getWidth() / 2, b2body.getPosition().y - getHeight() / 2);
         if((stateTime > 3 || setToDestroy) && !destroyed) {

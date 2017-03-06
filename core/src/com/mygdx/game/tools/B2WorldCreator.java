@@ -16,9 +16,7 @@ import com.badlogic.gdx.maps.MapObject;
         import com.mygdx.game.sprites.tileObjects.*;
 
 
-/**
- * Created by brentaureli on 8/28/15.
- */
+
 public class B2WorldCreator {
     private Array<Goomba> goombas;
     private Array<Turtle> turtles;
