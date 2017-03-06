@@ -13,9 +13,10 @@ import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.LDoS;
 import com.mygdx.game.screens.PlayScreen;
 import com.mygdx.game.sprites.Hero;
+//import com.mygdx.game.sprites.enemies.Enemy;
 
 
-public class Goomba extends com.mygdx.game.sprites.enemies.Enemy
+public class Goomba extends Enemy
 {
     private float stateTime;
     private Animation walkAnimation;
