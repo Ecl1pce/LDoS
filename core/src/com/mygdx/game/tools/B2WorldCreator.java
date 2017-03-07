@@ -1,6 +1,6 @@
 package com.mygdx.game.tools;
 
-import com.badlogic.gdx.maps.MapObject;
+        import com.badlogic.gdx.maps.MapObject;
         import com.badlogic.gdx.maps.objects.RectangleMapObject;
         import com.badlogic.gdx.maps.tiled.TiledMap;
         import com.badlogic.gdx.math.Rectangle;
@@ -64,6 +64,25 @@ public class B2WorldCreator {
             new Brick(screen, object);
         }
 
+        //create death zone
+
+        for(MapObject object : map.getLayers().get(8).getObjects().getByType(RectangleMapObject.class)){
+            Rectangle rect = ((RectangleMapObject) object).getRectangle();
+
+            bdef.type = BodyDef.BodyType.StaticBody;
+            bdef.position.set((rect.getX() + rect.getWidth() / 2) / LDoS.PPM, (rect.getY() + rect.getHeight() / 2) / LDoS.PPM);
+
+            body = world.createBody(bdef);
+
+            shape.setAsBox(rect.getWidth() / 2 / LDoS.PPM, rect.getHeight() / 2 / LDoS.PPM);
+            fdef.shape = shape;
+            fdef.filter.categoryBits = LDoS.DEATH_BIT;
+            body.createFixture(fdef);
+        }
+       /** for(MapObject object : map.getLayers().get(8).getObjects().getByType(RectangleMapObject.class)){
+            new DeadZone(screen, object);
+        } **/
+
         //create coin bodies/fixtures
         for(MapObject object : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)){
 
@@ -82,6 +101,7 @@ public class B2WorldCreator {
             turtles.add(new Turtle(screen, rect.getX() / LDoS.PPM, rect.getY() / LDoS.PPM));
         }
     }
+
 
     public Array<Goomba> getGoombas() {
         return goombas;

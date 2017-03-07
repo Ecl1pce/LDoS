@@ -96,7 +96,7 @@ public class PlayScreen implements Screen{
         music = LDoS.manager.get("audio/music/mario_music.ogg", Music.class);
         music.setLooping(true);
         music.setVolume(0.2f);
-        music.play();
+        //music.play();
 
         items = new Array<Item>();
         itemsToSpawn = new LinkedBlockingQueue<ItemDef>();
@@ -136,8 +136,8 @@ public class PlayScreen implements Screen{
                 player.b2body.applyLinearImpulse(new Vector2(0.1f, 0), player.b2body.getWorldCenter(), true);
             if (Gdx.input.isKeyPressed(Input.Keys.LEFT) && player.b2body.getLinearVelocity().x >= -2)
                 player.b2body.applyLinearImpulse(new Vector2(-0.1f, 0), player.b2body.getWorldCenter(), true);
-            if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE))
-                player.fire();
+            //if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE))
+            //   player.fire();
         }
 
     }

@@ -64,12 +64,24 @@ public class WorldContactListener implements ContactListener {
                 else
                     ((Item)fixB.getUserData()).use((Hero) fixA.getUserData());
                 break;
+                /**if(fixA.getFilterData().categoryBits == LDoS.MARIO_BIT)
+                    ((Hero)fixA.getUserData()).die();
+                else
+                    ((Hero)fixB.getUserData()).die();
+                break;**/
+
             case LDoS.FIREBALL_BIT | LDoS.OBJECT_BIT:
                 if(fixA.getFilterData().categoryBits == LDoS.FIREBALL_BIT)
                     ((FireBall)fixA.getUserData()).setToDestroy();
                 else
                     ((FireBall)fixB.getUserData()).setToDestroy();
                 break;
+            case LDoS.MARIO_BIT | LDoS.DEATH_BIT:
+                if(fixA.getFilterData().categoryBits == LDoS.MARIO_BIT)
+                    ((Hero)fixA.getUserData()).die();
+                else
+                    ((Hero)fixB.getUserData()).die();
+                 break;
         }
     }
 

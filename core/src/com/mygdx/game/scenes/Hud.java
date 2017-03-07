@@ -60,7 +60,7 @@ public class Hud implements Disposable{
         timeLabel = new Label("TIME", new Label.LabelStyle(new BitmapFont(), Color.GREEN));
         levelLabel = new Label("1-1", new Label.LabelStyle(new BitmapFont(), Color.GREEN));
         worldLabel = new Label("WORLD", new Label.LabelStyle(new BitmapFont(), Color.GREEN));
-        marioLabel = new Label("MARIO", new Label.LabelStyle(new BitmapFont(), Color.GREEN));
+        marioLabel = new Label("SCORE", new Label.LabelStyle(new BitmapFont(), Color.GREEN));
 
         //add labels to table, padding the top, and giving them all equal width with expandX
         table.add(marioLabel).expandX().padTop(10);
